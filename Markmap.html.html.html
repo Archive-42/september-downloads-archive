@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.3"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Guestbook with Cloud Code","c":[{"t":"heading","d":2,"p":{"lines":[6,7]},"v":"Table of Contents","c":[{"t":"list_item","d":4,"p":{"lines":[7,8]},"v":"<a href=\"#whats-in-this-sample\">What's in this sample</a>"},{"t":"list_item","d":4,"p":{"lines":[8,9]},"v":"<a href=\"#getting-started-with-vs-code\">Getting Started with VS Code</a>"},{"t":"list_item","d":4,"p":{"lines":[9,10]},"v":"<a href=\"#getting-started-with-intellij\">Getting Started with IntelliJ</a>"},{"t":"list_item","d":4,"p":{"lines":[10,11]},"v":"<a href=\"#sign-up-for-user-research\">Sign up for User Research</a>"}]},{"t":"heading","d":2,"p":{"lines":[13,14]},"v":"What's in this sample","c":[{"t":"heading","d":3,"p":{"lines":[14,15]},"v":"Kubernetes architecture"},{"t":"heading","d":3,"p":{"lines":[17,18]},"v":"Directory contents","c":[{"t":"list_item","d":5,"p":{"lines":[20,21]},"v":"<code>skaffold.yaml</code> - A schema file that defines skaffold configurations (<a href=\"https://skaffold.dev/docs/references/yaml/\">skaffold.yaml reference</a>)"},{"t":"list_item","d":5,"p":{"lines":[21,22]},"v":"<code>kubernetes-manifests/</code> - Contains Kubernetes YAML files for the Guestbook services and deployments, including:","c":[{"t":"list_item","d":7,"p":{"lines":[23,24]},"v":"<code>guestbook-frontend.deployment.yaml</code> - deploys a pod with the frontend container image"},{"t":"list_item","d":7,"p":{"lines":[24,25]},"v":"<code>guestbook-frontend.service.yaml</code> - creates a load balancer and exposes the frontend service on an external IP in the cluster"},{"t":"list_item","d":7,"p":{"lines":[25,26]},"v":"<code>guestbook-backend.deployment.yaml</code> - deploys a pod with the backend container image"},{"t":"list_item","d":7,"p":{"lines":[26,27]},"v":"<code>guestbook-backend.service.yaml</code> - exposes the backend service on an internal IP in the cluster"},{"t":"list_item","d":7,"p":{"lines":[27,28]},"v":"<code>guestbook-mongodb.deployment.yaml</code> - deploys a pod containing a MongoDB instance"},{"t":"list_item","d":7,"p":{"lines":[28,29]},"v":"<code>guestbook-mongodb.service.yaml</code> - exposes the MongoDB service on an internal IP in the cluster"}]}]}]},{"t":"heading","d":2,"p":{"lines":[31,32]},"v":"Getting Started with VS Code","c":[{"t":"heading","d":3,"p":{"lines":[33,34]},"v":"Run the app locally with minikube","c":[{"t":"list_item","d":5,"p":{"lines":[35,37],"index":1},"v":"1. To run your application, click on the Cloud Code status bar and select ‘Run on Kubernetes’.<br>\n<img src=\"./img/status-bar.png\" alt=\"image\">"},{"t":"list_item","d":5,"p":{"lines":[38,40],"index":2},"v":"2. Select ‘Run locally using minikube’ when prompted. Cloud Code runs your app in a local <a href=\"https://minikube.sigs.k8s.io/docs/start/\">minikube</a> cluster.<br>\n<img src=\"./img/create-k8s-cluster.png\" alt=\"image\">"},{"t":"list_item","d":5,"p":{"lines":[41,43],"index":3},"v":"3. View the build progress in the OUTPUT window. Once the build has finished, click on the front end service's URL in the OUTPUT window to view your live application.<br>\n<img src=\"./img/kubernetes-guestbook-url.png\" alt=\"image\">"},{"t":"list_item","d":5,"p":{"lines":[44,45],"index":4},"v":"4. To stop the application, click the stop icon on the Debug Toolbar."}]}]},{"t":"heading","d":2,"p":{"lines":[48,49]},"v":"Getting Started with IntelliJ","c":[{"t":"heading","d":3,"p":{"lines":[50,51]},"v":"Run the app locally with minikube","c":[{"t":"heading","d":4,"p":{"lines":[52,53]},"v":"Edit run configuration","c":[{"t":"list_item","d":6,"p":{"lines":[53,55],"index":1},"v":"1. Click the Run/Debug Configurations dropdown on the top taskbar and select 'Edit Configurations'.<br>\n<img src=\"./img/edit-configurations.png\" alt=\"image\">"},{"t":"list_item","d":6,"p":{"lines":[56,57],"index":2},"v":"2. In the Run/Debug Configurations dialog, select 'Develop on Kubernetes'. This configuration watches for changes, then uses <a href=\"https://skaffold.dev/docs/\">skaffold</a> to rebuild and rerun your app."},{"t":"list_item","d":6,"p":{"lines":[58,60],"index":3},"v":"3. Under <strong>Run &gt; Deployment</strong>, select 'Deploy locally to a minikube cluster'.<br>\n<img src=\"./img/run-debug-dialog.png\" alt=\"image\">"},{"t":"list_item","d":6,"p":{"lines":[61,62],"index":4},"v":"4. Click 'OK' to save your configuration."}]},{"t":"heading","d":4,"p":{"lines":[64,65]},"v":"Run the app on minikube","c":[{"t":"list_item","d":6,"p":{"lines":[65,67],"index":1},"v":"1. Select 'Develop on Kubernetes' from the configuration drop down and click the run icon. Cloud Code runs your app in a local <a href=\"ttps://minikube.sigs.k8s.io/docs/start/\">minikube</a> cluster.<br>\n<img src=\"./img/deploy-config.png\" alt=\"image\">"},{"t":"list_item","d":6,"p":{"lines":[68,70],"index":2},"v":"2. View the build process in the output window. Once the build has finished, you will receive a notification from the Event Log. Click 'View' to access the local URLs for your deployed services. The URLs remain accessible through the Event Log dialog.<br>\n<img src=\"./img/deploy-success.png\" alt=\"image\">"},{"t":"list_item","d":6,"p":{"lines":[71,72],"index":3},"v":"3. To stop the application, click the stop icon next to the configuration dropdown."}]}]}]},{"t":"heading","d":2,"p":{"lines":[74,75]},"v":"Sign up for User Research"}]})</script>
+</body>
+</html>
