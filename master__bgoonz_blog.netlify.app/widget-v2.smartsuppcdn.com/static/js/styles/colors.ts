@@ -1,0 +1,18 @@
+export const smartColors = {
+	lightGrey: '#f0f2f7',
+	lightGrey95: 'rgba(240, 242, 247, 0.94)',
+	borderGrey: '#E2E2E2',
+	blackTextColor: 'black',
+	green: '#3CF64F',
+	red: '#FF0000',
+	darkerGrey: '#B4B5C5',
+	darkGrey: '#DCDFEB',
+	white: 'white',
+	grey: '#717284',
+	icons: '#A6B2BD',
+	inputText: '#06132B',
+	inputPlaceholderText: '#717284',
+	inputPlaceholderText95: 'rgba(113,114,132,0.95)',
+	warning: '#ffcf00',
+	orange: '#F8A000',
+}

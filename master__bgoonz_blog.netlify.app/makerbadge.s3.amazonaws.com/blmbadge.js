@@ -3,10 +3,10 @@ function MakerBadge(t) {
 }
 MakerBadge.prototype = {
     constructor: MakerBadge,
-    init: function(t, e) {
+    init: function (t, e) {
         t.id && (this.userId = t.id), t.position && (this.position = t.position), t.layout && (this.layout = t.layout), t.promoText && (this.promoText = t.promoText), t.promoLink && (this.promoLink = t.promoLink), t.imageAlt && (this.imageAlt = t.imageAlt), t.theme && (this.theme = t.theme), t.title && (this.title = t.title), t.message && (this.message = t.message), t.customHTML && (this.customHTML = t.customHTML), this.layout && t.pic && (this.pic = '<img alt="' + (t.imageAlt ? t.imageAlt : "Black Lives Matter Badge") + '" width="30" style="border-radius:100%" src="' + t.pic + '"/>&nbsp;&nbsp;'), this.mounted = !0, this.run(e)
     },
-    run: function(t) {
+    run: function (t) {
         const e = document.querySelector("html"),
             i = document.createElement("div"),
             a = document.createElement("div"),
@@ -31,7 +31,7 @@ MakerBadge.prototype = {
             i.classList.contains("isOpen") ? (2 === b.layout ? i.setAttribute("style", "visibility:visible;bottom:calc(-" + p + "px + 76px)") : i.setAttribute("style", "visibility:visible;bottom:calc(-" + p + "px + 50px)"), i.classList.remove("isOpen")) : (i.setAttribute("style", "visibility:visible;"), i.classList.add("isOpen"))
         })
     },
-    setStyle: function() {
+    setStyle: function () {
         let t = ".isOpen{bottom: 0;}";
         if (this.style = document.createElement("style"), this.style.type = "text/css", 1 === this.layout) {
             var e = ".ph-btn{margin: 0 auto;          height: 30px;           width: 30px;           text-align: left;           line-height: 30px;          background: #da552f;          display: block;          border-radius: 50%;          font-size: 1rem;          color: #fff;          text-decoration: none;          font-weight: 800;}";

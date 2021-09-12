@@ -1,0 +1,4 @@
+export const BREAKPOINT_MD = 450
+export const BREAKPOINT_HEIGHT_MD = 550
+export const TABLET_MIN_THRESHOLD = 550
+export const TABLET_MAX_THRESHOLD = 1200
